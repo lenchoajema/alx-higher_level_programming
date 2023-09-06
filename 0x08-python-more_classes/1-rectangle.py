@@ -6,35 +6,35 @@ Defines a class Rectangle
 
 class Rectangle:
     """Representation of a rectangle"""
-    def __init__(self, len_width=0, len_height=0):
+    def __init__(self, width=0, height=0):
         """Initializes the rectangle"""
-        self.len_height = len_height
-        self.len_width = len_width
+        self.height = height
+        self.width = width
 
     @property
-    def len_width(self):
+    def width(self):
         """getter for the private instance attribute width"""
-        return self.__len_width
+        return self.__width
 
-    @len_width.setter
-    def len_width(self, value):
+    @width.setter
+    def width(self, value):
         """setter for the private instance attribute width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.__len_width = value
+        self.__width = value
 
     @property
-    def len_height(self):
+    def height(self):
         """getter for the private instance attribute height"""
-        return self.__len_height
+        return self.__height
 
-    @len_height.setter
-    def len_height(self, value):
+    @height.setter
+    def height(self, value):
         """setter for the private instance attribute height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__len_height = value
+        self.__height = value
